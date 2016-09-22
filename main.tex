@@ -1,0 +1,63 @@
+\documentclass{article}
+
+\usepackage[margin=1in]{geometry}
+
+\usepackage{datetime}
+\usepackage{pgffor}
+\usepackage{amsthm}
+
+\newcommand{\pad}[1]{%
+  \ifnum#1<10 0\fi#1%
+}
+
+\newcounter{uid}
+\newcommand{\entry}[4][]{
+  \stepcounter{uid}
+  \theoremstyle{#4}
+  \newtheorem*{\arabic{uid}}{#3}
+  \begin{\arabic{uid}}[#1]
+    #2
+  \end{\arabic{uid}}
+}
+
+\newcommand{\dfn}[2][]{
+  \entry[#1]{#2}{Definition}{definition}
+}
+\newcommand{\prop}[2][]{
+  \entry[#1]{#2}{Proposition}{plain}
+}
+\newcommand{\thm}[2][]{
+  \entry[#1]{#2}{Theorem}{plain}
+}
+\newcommand{\fact}[2][]{
+  \entry[#1]{#2}{Fact}{plain}
+}
+\newcommand{\rmk}[2][]{
+  \entry[#1]{#2}{Remark}{remark}
+}
+
+\title{GRT List}
+\author{
+  Nick Spinale \\
+  \it Budapest Semesters in Mathematics \\
+  \it Introduction to Mathematical Cryptography
+}
+\date{Compiled: \today}
+
+\begin{document}
+
+\maketitle
+
+\foreach \month in {1, ..., 12} {
+  \foreach \day in {1, ..., 31} {
+    \edef\file{src/\pad{\month}-\pad{\day}.tex}
+    % \edef\file{src/\lowercase{\shortmonthname{\month}}\pad{\day}}
+    \IfFileExists{\file}{
+      \newdate{date}{\day}{\month}{2016}
+      \section*{\displaydate{date}}
+      \input{\file}
+    }
+  }
+}
+
+\end{document}

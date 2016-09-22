@@ -1,2 +1,4 @@
 # grt-list
-List of definitions and theorems from GRT fall 2016
+
+A list of definitions and theorems from GRT fall 2016.
+This document will not contain proofs or examples.
