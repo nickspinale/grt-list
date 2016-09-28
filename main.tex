@@ -2,9 +2,14 @@
 
 \usepackage[margin=1in]{geometry}
 
+\usepackage{enumitem}
 \usepackage{datetime}
 \usepackage{pgffor}
 \usepackage{amsthm}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+\setlist[description]{leftmargin=\parindent,labelindent=\parindent}
 
 \newcommand{\pad}[1]{%
   \ifnum#1<10 0\fi#1%
@@ -19,6 +24,11 @@
     #2
   \end{\arabic{uid}}
 }
+
+\newcommand{\homework}{{
+  \vskip.5\baselineskip
+  \noindent\large\bfseries [Homework]
+}}
 
 \newcommand{\dfn}[2][]{
   \entry[#1]{#2}{Definition}{definition}
@@ -36,7 +46,10 @@
   \entry[#1]{#2}{Remark}{remark}
 }
 
-\title{GRT List}
+\title{
+  GRT Statements \\
+  \large A Collection of Unsubstantiated Claims
+}
 \author{
   Nick Spinale \\
   \it Budapest Semesters in Mathematics \\
