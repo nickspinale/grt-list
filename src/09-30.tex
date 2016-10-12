@@ -1,0 +1,55 @@
+\dfn{
+    Let $G$ be a graph.
+    To each vertex in $G$, assign an ordering of its neighbors.
+    This order is called a preference list.
+    A matching is stable if there is an edge not in the matching such that each endpoint either prefers the other over its match or is unmatched.
+    Such an edge is called an unstabilizing edge.
+}
+
+\thm[Gale-Shapley]{
+    A bipartite graph always has a stable matching.
+}
+
+\dfn{
+    A proper coloring of a graph $G$ is a function $c : V(G) \rightarrow A$
+    such that $\forall uv \in E(G) : c(u) \neq c(v)$.
+}
+
+\dfn{
+    The chromatic number of a graph $G$, denoted $\chi(G)$, is the minimum $n \in \N$
+    such that there exists some proper coloring $c : V(G) \rightarrow [n]$.
+}
+
+\fact{
+    $\chi(G) \leq \Delta(G) + 1$.
+}
+
+\fact{
+    $\chi(K_n) = n$
+}
+
+\fact{
+    $\chi(C_{2k+1}) = 3$
+}
+
+\thm[Brooks]{
+    If $G$ is connected and not isomorphic to the a complete graph or an odd cycle, then $\chi(G) \leq \Delta(G)$.
+}
+
+\prop{
+    $\chi(G) \leq \text{ max } \{\;\delta(H) : \text{$H$ is an induced subgraph in $G$} \;\} + 1$.
+}
+
+\dfn{
+    The clique number of $G$, denoted $\omega(G)$, is the size of the largest complete subgraph in $G$.
+}
+
+\prop{
+    $\chi(G) \ge \omega(G)$
+}
+
+\homework
+
+\prop{
+    If a graph is not bipartite, then there exists an assignment of preference lists for which no stable matching exists.
+}

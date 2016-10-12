@@ -1,0 +1,35 @@
+\dfn{
+    If $G$ is a graph, then a proper edge coloring of $G$ is a function $c : E(G) \rightarrow A$
+    such that $\forall e, f \in E(G) : e \cap f \neq \varnothing \implies c(e) \neq c(f)$.
+}
+
+\dfn{
+    The chromatic number (or chromatic index) of the edges in a graph $G$,
+    denoted $\chi_e(G)$ or $\chi'(G)$,
+    is the least $n \in \N$ such that there exists a proper coloring $c : E(G) \rightarrow [n]$.
+}
+
+\thm[Vizing]{
+    If $G$ is a finite simple graph, then $\Delta(G) \ge \chi_e(G) \ge \Delta(G) + 1$.
+}
+
+\obs{
+    $\chi_e(C_{2k+1}) = \Delta(G) + 1$
+}
+
+\thm[Shannon]{
+    If $G$ is a graph (simple or otherwise), then $\chi_e(G) \le \frac{3}{2}\Delta(G)$.
+}
+
+\dfn{
+    Assume $G$ is a graph.
+    The line graph of $G$, denoted $L(G)$, is such that
+    \begin{itemize}
+        \item $V(L(G)) = E(G)$
+        \item $E(L(G)) = \{\; ef : e,f \in E(G) \wedge e \cap f \neq \varnothing \;\}$
+    \end{itemize}
+}
+
+\thm{
+    If $G$ is bipartite, then $\chi(G) = \Delta(G)$.
+}

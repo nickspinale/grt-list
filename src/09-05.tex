@@ -4,6 +4,15 @@
 }
 
 \dfn{
+    $H$ is a subgraph of a graph $G$ if $H$ is a graph and $V(H) \subseteq V(G)$ and $E(H) \subseteq E(G)$.
+}
+
+\dfn{
+    If $G$ is a graph and $A \subseteq V(G)$, the induced subgraph of $G$ for vertex set $A$, denoted $G[A]$,
+    is $\langle A, \{ e \in E(G) : e \cap A \neq \varnothing \} \rangle$.
+}
+
+\dfn{
     Graphs $F$ and $G$ are isomorphic iff
     there exists some $h : V(F) \leftrightarrow V(G)$ such that
     $uv \in E(F) \iff h(u)h(v) \in E(G)$.
@@ -19,6 +28,62 @@
     If $G$ is a graph, then a sequence of vertices in $G$ $x_1x_2 \dots x_{n+1}$
     such that $x_ix_{i+1} \in E(G)$ for all $1 \le i \le n$
     is a walk.
+}
+
+\dfn{
+    A path is a walk with no repeated vertices.
+}
+
+\dfn{
+    A cycle is a walk of more than four vertices where all but the first and last are unique.
+}
+
+\dfn{
+    Assume $G$ is a graph.
+    Then the compliment of $G$, denoted $\bar{G}$, is $\langle V(G), {V(G) \choose 2} \setminus E(G) \rangle$.
+}
+
+\dfn{
+    The degree of a vertex is the number of edges that contain it.
+}
+
+\dfn{
+    A graph is connected if, for any two vertices, there is a path between them.
+}
+
+\dfn{
+    A graph $G$ is minimally connected if it is connected, but for all $v \in V(G)$,
+    $G[V(G) \setminus v]$ is not connected.
+}
+
+\dfn{
+    A tree is a graph that is both connected and contains no cycles.
+}
+
+\thm{
+    A tree on at least 2 vertices always contains at least 2 vertices of degree 1.
+}
+
+\thm{
+    A tree on $n$ vertices has $n-1$ edges.
+}
+
+\dfn{
+    The Pr\"ufer code is way of encoding a tree into a sequence of natural numbers.
+    The Pr\"ufer code of a tree on $n$ vertices can be obtained in the following way:
+    \begin{enumerate}
+        \item Label the vertices $1,2,\dots,n$.
+        \item Until only one vertex remains, remove the leaf with the smallest label, and append the label of its neighbor to the sequence.
+    \end{enumerate}
+}
+
+\prop{
+    The Pr\"ufer code of a tree on $n$ vertices has length $n-1$ and ends in $n$.
+    Furthermore, every sequence of $n-1$ natural numbers between 1 and $n$ ending in $n$ encodes exaclty one tree on $n$ labelled vertices.
+}
+
+\thm[Cayley]{
+    There are $n^{n-2}$ different trees on $n$ labelled vertices.
 }
 
 % \dfn{

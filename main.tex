@@ -3,6 +3,7 @@
 \usepackage[margin=1in]{geometry}
 
 \usepackage{enumitem}
+% \usepackage{enumerate}
 \usepackage{datetime}
 \usepackage{pgffor}
 \usepackage{amsthm}
@@ -10,6 +11,8 @@
 \usepackage{amsmath}
 
 \setlist[description]{leftmargin=\parindent,labelindent=\parindent}
+
+\newcommand{\N}{\mathbb{N}}
 
 \newcommand{\pad}[1]{%
   \ifnum#1<10 0\fi#1%
@@ -30,6 +33,9 @@
   \noindent\large\bfseries [Homework]
 }}
 
+\newcommand{\notation}[2][]{
+  \entry[#1]{#2}{Notation}{definition}
+}
 \newcommand{\dfn}[2][]{
   \entry[#1]{#2}{Definition}{definition}
 }
@@ -39,11 +45,17 @@
 \newcommand{\thm}[2][]{
   \entry[#1]{#2}{Theorem}{plain}
 }
+\newcommand{\cor}[2][]{
+  \entry[#1]{#2}{Corollary}{plain}
+}
 \newcommand{\fact}[2][]{
   \entry[#1]{#2}{Fact}{plain}
 }
 \newcommand{\rmk}[2][]{
   \entry[#1]{#2}{Remark}{remark}
+}
+\newcommand{\obs}[2][]{
+  \entry[#1]{#2}{Observation}{remark}
 }
 
 \title{

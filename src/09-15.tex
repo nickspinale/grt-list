@@ -1,0 +1,42 @@
+\thm[Dirac, 1952]{
+    If $G$ is a graph on $n$ vertices such that all of its vertices have degree at least $\frac{n}{2}$,
+    then $G$ contains a Hamiltonian cycle.
+}
+
+\thm[Ore, 1960]{
+    Assume $G$ is a graph on $n$ vertices.
+    If $d(u) + d(v) \ge n$ for all $u,v \in V(G)$ such that $uv \notin E(G)$, then $G$ contains an H-cycle.
+}
+
+\thm[Posa, 1962]{
+    Assume $G$ is a graph on $n$ vertices with degrees $d_1 \le d_2 \le d_3 \le \dots \le d_n$.
+    If $\forall k \le \frac{n}{2} : k+1 \le d_k$ then $G$ contains an H-cycle.
+}
+
+\thm[Chv\'atal]{
+    \begin{enumerate}
+        \item Assume $G$ is a graph on $n$ vertices with degrees $d_1 \le d_2 \le d_3 \le \dots \le d_n$.
+            $G$ contains an H-cycle if,
+            for all $k \le \frac{n}{2}$ such that $d_k \le k$,
+            $d_{n-k} \ge n-k$.
+        \item Assume $d_1 \le d_2 \le d_3 \le \dots \le d_n$ is a sequence of degrees and that,
+            for some $k \le \frac{n}{2}$, $d_k \le k$ and $d_{n-k} \le n-k$.
+            There is some graph $G$ with degrees $d'_1 \le d'_2 \le d'_3 \le \dots \le d'_n$
+            such that $d'_i \ge d_i$ and $G$ does not contain an H-cycle.
+    \end{enumerate}
+}
+
+\obs{
+    Chv\'atal implies Posa, which in turn implies Dirac.
+}
+
+\homework
+
+\notation{
+    If $G$ is a graph, then $\delta(G)$ is the minimum degree in $G$, and $\Delta(G)$ is the maximum.
+}
+
+\prop{
+    Assume $G$ is a graph on $2k+1$ vertices such $\delta(G) \ge k$.
+    $G$ contains an H-path.
+}

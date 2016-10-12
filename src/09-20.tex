@@ -1,0 +1,36 @@
+\dfn{
+    Two edges are independent if they are disjoint.
+}
+\dfn{
+    A matching is a set of independent edges.
+}
+\dfn{
+    If $G$ is a graph, then
+    a matching containing every vertex in $G$ (i.e. a matching of size $\frac{|V(G)|}{2}$)
+    is called a perfect matching.
+}
+
+\dfn{
+    Assume $G$ is a graph.
+    $G$ is called bipartite iff there exist disjoint sets $A$ and $B$ such that $A\cup B = V(G)$
+    and $\forall e \in E(G) : e \not\subseteq A \wedge e \not\subseteq B$.
+}
+
+\thm{
+    A graph is bipartite iff it does not contain an odd cycle.
+}
+
+\notation{
+    Assume $G$ is a graph and $X \subseteq V(G)$.
+    $N(X) = \{ v \in V(G) : \exists x \in X : xv \in E(G) \}$.
+}
+
+\thm[Hall]{
+    Assume $G = \langle A,B,E \rangle$ is a bipartite graph.
+    $G$ contains a matching covering $A$ iff $\forall X \subseteq A : |N(X)| \ge |X|$.
+}
+
+\cor[Frobeinus]{
+    Assume $G = \langle A,B,E \rangle$ is a bipartite graph.
+    $G$ contains a perfect matching iff $|A| = |B|$ and $\forall X \subseteq A : |N(X)| \ge |X|$.
+}
